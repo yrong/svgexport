@@ -17,10 +17,16 @@ async function renderSvg(commands, done, stdout) {
   // Make sure the commands var is an array.
   commands = Array.isArray(commands) ? commands : [ commands ];
 
-  var browser = await puppeteer.launch({
+  let options = {
     headless: true,
-    args: ['--no-sandbox', '--font-render-hinting=none']
-  });
+    args: ['--no-sandbox', '--font-render-hinting=none'],
+  }
+
+  if(process.env["CHROME_PATH"]){
+    options['executablePath'] = process.env["CHROME_PATH"]
+  }
+
+  var browser = await puppeteer.launch(options);
 
   // Run each command in parallel.
   await async.each(commands, async function(cmd) {

@@ -1,10 +1,11 @@
 {
-  "name": "svgexport",
-  "version": "0.4.1",
+  "name": "svgexport-forked",
+  "version": "0.4.1-beta.1",
   "description": "Node.js module and command-line tool for exporting SVG to PNG and JPEG.",
   "author": "Ali Shakiba",
   "contributors": [
-    "Michael Heerklotz"
+    "Michael Heerklotz",
+    "Ron Yang"
   ],
   "keywords": [
     "svg",
@@ -23,11 +24,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakiba/svgexport.git"
+    "url": "https://github.com/yrong/svgexport.git"
   },
   "dependencies": {
-    "async": "^3.2.0",
-    "puppeteer": "^3.0.2"
+    "async": "^3.2.3",
+    "puppeteer": "^13.0.1"
   },
   "main": "index.js",
   "bin": {
